@@ -1,7 +1,9 @@
 .section {
   padding: $section-padding;
+  color: #ffffff;
+
   &::after {
-    content: '';
+    content: " ";
     display: table;
     clear: both;
   }
@@ -9,13 +11,24 @@
   &__header {
     line-height: 1.2;
     margin-bottom: 50px;
+    width: 60%;
 
     h2 {
-      font-size: 6.1875rem;
+      font-size: 5.1875rem;
       font-weight: bold;
       margin: 0;
       padding: 0;
       text-transform: uppercase;
+      margin-top: 60px;
+    }
+
+    h3 {
+      font-size: 5rem;
+      font-weight: bold;
+      margin: 0;
+      padding: 0;
+      text-transform: uppercase;
+      margin-top: 60px;
     }
 
     p {
@@ -29,14 +42,24 @@
 
   &__text {
     margin-bottom: 80px;
+    width: 60%;
 
     p {
       margin: 0;
       padding: 0;
-      font-size: 5.0625rem;
-      font-weight: bold;
+      font-size: 1.125rem;
+      font-family: "Open Sans", Arial, sans-serif;
+      font-weight: 300;
       line-height: 1.2;
       text-align: left;
+    }
+
+    &--large {
+      p {
+        font-size: 4.0625rem;
+        font-family: Lato, Arial, sans-serif;
+        font-weight: bold;
+      }
     }
   }
 
@@ -63,6 +86,17 @@
   }
 }
 
+.device {
+  position: fixed;
+  bottom: -100%;
+  right: 10%;
+  z-index: 2;
+  transition: all 0.7s ease-in;
+
+  &--visible {
+    bottom: -15%;
+  }
+}
 
 .first-screen {
   background:
@@ -70,4 +104,31 @@
   url("../img/bg.jpg")  no-repeat center center / cover,
   linear-gradient(45deg, $primary-color, $primary-color);
   color: #ffffff;
+}
+
+.second-screen {
+  background: url("../img/bow1.svg") no-repeat -50% -25%;
+  background-size: 116%;
+  background-color: $secondary-color;
+}
+
+
+@media screen and (max-width: 980px) {
+  .first-screen {
+    background:
+    url("../img/bg1stscreen.png") no-repeat 150px  30% / cover,
+    url("../img/bg.jpg")  no-repeat center center / cover,
+    linear-gradient(45deg, $primary-color, $primary-color);
+    color: #ffffff;
+  }
+}
+
+@media screen and (max-width: 800px) {
+  .first-screen {
+    background:
+    url("../img/bg1stscreen.png") no-repeat -70px  30% / cover,
+    url("../img/bg.jpg")  no-repeat center center / cover,
+    linear-gradient(45deg, $primary-color, $primary-color);
+    color: #ffffff;
+  }
 }
