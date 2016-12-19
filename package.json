@@ -21,8 +21,10 @@
     "rimraf": "*"
   },
   "devDependencies": {
+    "fullpage.js": "^2.9.0",
     "gulp-svgmin": "^1.2.2",
     "gulp-svgstore": "^6.0.0",
+    "jquery": "^2.1.1",
     "path": "^0.12.7"
   }
 }

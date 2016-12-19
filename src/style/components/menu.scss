@@ -1,0 +1,56 @@
+.main-header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 0 3.125%;
+  background: linear-gradient(to left, $primary-color, $primary-color);
+  z-index: 2;
+}
+
+.menu {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 0;
+
+  &__left {
+    display: flex;
+    justify-content: flex-start;
+    flex-basis: 60%;
+  }
+
+  &__right {
+    display: flex;
+    justify-content: space-between;
+    flex-basis: 30%;
+  }
+
+  &__list {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    list-style-type: none;
+    flex-basis: 60%;
+
+    a {
+      color: #ffffff;
+      text-decoration: none;
+      transition: all 0.3s ease-in;
+      font-size: 1rem;
+      font-weight: bold;
+
+      &:hover,
+      &:active {
+        color: $secondary-color;
+      }
+    }
+  }
+
+  .logo {
+    margin-right: 30px;
+    color: #ffffff;
+    font-size: 2rem;
+    font-weight: bold;
+  }
+}
