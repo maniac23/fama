@@ -14,6 +14,10 @@ $(document).ready(function() {
       scrollingSpeed: 1000,
       scrollBar: true,
       verticalCentered: true,
+      onLeave: function(index, nextIndex, direction){
+            var leavingSection = $(this);
+            console.log(index);
+          }
     });
   });
 // check if first-screen is visible & remove device frame from viewport
