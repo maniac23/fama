@@ -12,7 +12,7 @@ $(document).ready(function() {
     easingcss3: 'ease-in-out',
     scrollingSpeed: 1000,
     scrollBar: true,
-    verticalCentered: true,
+    // verticalCentered: true,
     onLeave: function(index, nextIndex, direction) {
       var leavingSection = $(this);
       console.log(index);
