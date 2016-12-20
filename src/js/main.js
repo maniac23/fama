@@ -18,6 +18,19 @@ $(document).ready(function() {
       console.log(index);
     }
   });
+
+  // toggle mobile-menu
+  $('.menu-icon').click(function(){
+    $(this).toggleClass('menu-icon--opened');
+    $('.mobile-menu').fadeToggle().css('display', 'flex');
+  });
+
+  // hide mobile menu on link click
+
+  $('.mobile-menu a, .mobile-menu button').click(function(){
+    $('.menu-icon').removeClass('menu-icon--opened');
+    $('.mobile-menu').fadeOut();
+  })
 });
 // check if first-screen is visible & remove device frame from viewport
 $(window).scroll(function() {
