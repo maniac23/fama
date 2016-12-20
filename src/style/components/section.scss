@@ -11,7 +11,7 @@
   &__header {
     line-height: 1.2;
     margin-bottom: 50px;
-    width: 60%;
+    width: 50%;
 
     h2 {
       font-size: 5.1875rem;
@@ -42,7 +42,7 @@
 
   &__text {
     margin-bottom: 80px;
-    width: 60%;
+    width: 50%;
 
     p {
       margin: 0;
@@ -88,14 +88,14 @@
 
 .device {
   position: fixed;
-  bottom: -100%;
+  bottom: -110%;
   right: 10%;
   z-index: 2;
   transition: all 0.7s ease-in;
   overflow: hidden;
 
   &--visible {
-    bottom: -10%;
+    bottom: -150px;
   }
 
   &__frame {
@@ -104,10 +104,10 @@
 
   &__slides {
     position: absolute;
-    width: 300%;
+    width: 62%;
     overflow: hidden;
-    top: 76px;
-    left: 20px;
+    top: 117px;
+    left: 81px;
     display: flex;
     flex-direction: row;
     transition: all 0.3s ease-in;
@@ -128,9 +128,22 @@
 }
 
 .second-screen {
-  background: url("../img/bow1.svg") no-repeat -50% -25%;
-  background-size: 116%;
-  background-color: $secondary-color;
+  background:
+  url("../img/img_historias.png") 657px 0px/43% no-repeat,
+  url("../img/bow1.svg") 0 80px/116% no-repeat $secondary-color;
+}
+
+.third-screen {
+  background:
+  url("../img/bow2.svg")  545px 125px/91% no-repeat,
+  url("../img/img_tests.png")  650px 55px/37% no-repeat,
+  url("../img/bg.jpg")  no-repeat center center / cover;
+}
+
+.fourth-screen {
+  background:
+  url("../img/img_autografos.png") 650px 0/35% no-repeat,
+  url("../img/bow3.svg")  -25px 400px/105% no-repeat $secondary-color;
 }
 
 
