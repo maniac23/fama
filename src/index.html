@@ -18,12 +18,22 @@
         <a class="logo" href="/">
           <h1>FAMA</h1>
         </a>
-        <ul class="menu__list">
-          <li><a href="#">FamaApp</a></li>
-          <li><a href="#">Revista</a></li>
-          <li><a href="#">Tests</a></li>
-          <li><a href="#">Autografós</a></li>
-          <li><a href="#">Descargar</a></li>
+        <ul class="menu__list" id="menu">
+          <li data-menuanchor="famaapp">
+            <a href="#famaapp">FamaApp</a>
+          </li>
+          <li data-menuanchor="revista">
+            <a href="#revista">Revista</a>
+          </li>
+          <li data-menuanchor="tests">
+            <a href="#tests">Tests</a>
+          </li>
+          <li data-menuanchor="autographs">
+            <a href="#autographs">Autografós</a>
+          </li>
+          <li data-menuanchor="descargar">
+            <a href="#descargar">Descargar</a>
+          </li>
         </ul>
       </div>
       <div class="menu__right">
@@ -39,11 +49,11 @@
         <h1>FAMA</h1>
       </a>
       <ul class="mobile-menu__list">
-        <li><a href="#">FamaApp</a></li>
-        <li><a href="#">Revista</a></li>
-        <li><a href="#">Tests</a></li>
-        <li><a href="#">Autografós</a></li>
-        <li><a href="#">Descargar</a></li>
+        <li><a href="#famaapp">FamaApp</a></li>
+        <li><a href="#revista">Revista</a></li>
+        <li><a href="#tests">Tests</a></li>
+        <li><a href="#autographs">Autografós</a></li>
+        <li><a href="#descargar">Descargar</a></li>
       </ul>
       <div class="mobile-menu__buttons">
         <button class="btn">Eres celebrity</button>
@@ -64,7 +74,7 @@
 
   </div>
   <div class="wrapper" id="fullpage">
-    <section class="section first-screen">
+    <section class="section first-screen" data-anchior="famaapp">
       <div class="section__header">
         <h2>Fama</h2>
         <p>Ritmica</p>
@@ -82,7 +92,7 @@
         <p>*Descarga  gratis  la aplicación para tu móvil</p>
       </div>
     </section>
-    <section class="section second-screen">
+    <section class="section second-screen" data-anchor="revista">
       <div class="section__header">
         <h3>Las historias del Palamarés</h3>
       </div>
@@ -90,7 +100,7 @@
         <p>Disfrute de las historias de éxito en gimnasia La revista con las historias del éxito cuenta sobre las gimnastas, entrenadoras, jueces y toda la gente involucrada al mundo de la gimnasia rítmica.</p>
       </div>
     </section>
-    <section class="section third-screen">
+    <section class="section third-screen" data-anchor="tests">
       <div class="section__header">
         <h3>Los tests</h3>
       </div>
@@ -98,7 +108,7 @@
         <p>Descubre de ti mismo a través de nuestros tests Los seguidores pueden jugar a los tests para verificar ¿cómo de bien conocen la historia de gimnasia rítmica, sus normas? y compararse con  las estrellas de la gimnasia rítmica.</p>
       </div>
     </section>
-    <section class="section fourth-screen">
+    <section class="section fourth-screen" data-anchor="autographs">
       <div class="section__header">
         <h3>Los autografós</h3>
       </div>
@@ -106,7 +116,7 @@
         <p>Descargue la foto de tu gimnasta favorita con su firma y el mensaje personalizado para ti. Los usuarios pueden elegir la foto de su gimnasta favorita y recibirla comprando su autógrafo con el mensaje personalizado. La foto se puede utilizar como fondo de pantalla del móvil, distribuirla por las redes sociales o enviarla a los amigos con sus deseos. Descubre de ti mismo a través de nuestros tests Los seguidores pueden jugar a los tests para verificar ¿cómo de bien conocen la historia de gimnasia rítmica, sus normas? y compararse con  las estrellas de la gimnasia rítmica.</p>
       </div>
     </section>
-    <section class="section fifth-screen">
+    <section class="section fifth-screen" data-anchor="descargar">
       <div class="section__header section__header--centered">
         <h2>Fama</h2>
         <p>Ritmica</p>

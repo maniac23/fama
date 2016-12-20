@@ -6,8 +6,10 @@
 $(document).ready(function() {
   // initialize fullscreen scroll
   $('#fullpage').fullpage({
+    menu: '#menu',
     navigation: true,
     navigationPosition: 'left',
+    anchors:['famaapp', 'revista', 'tests', 'autographs', 'descargar'],
     css3: true,
     easingcss3: 'ease-in-out',
     scrollingSpeed: 1000,
@@ -30,16 +32,18 @@ $(document).ready(function() {
   $('.mobile-menu a, .mobile-menu button').click(function(){
     $('.menu-icon').removeClass('menu-icon--opened');
     $('.mobile-menu').fadeOut();
-  })
-});
-// check if first-screen is visible & remove device frame from viewport
-$(window).scroll(function() {
-  if ($('.first-screen').hasClass('active')) {
-    $('.device').removeClass('device--visible');
-  } else if ($('.fifth-screen').hasClass('active')) {
-    $('.device').addClass('device--full-visible');
-  } else {
-    $('.device').removeClass('device--full-visible');
-    $('.device').addClass('device--visible');
-  }
+  });
+
+
+  // check if first-screen is visible & remove device frame from viewport
+  $(window).scroll(function() {
+    if ($('.first-screen').hasClass('active')) {
+      $('.device').removeClass('device--visible');
+    } else if ($('.fifth-screen').hasClass('active')) {
+      $('.device').addClass('device--full-visible');
+    } else {
+      $('.device').removeClass('device--full-visible');
+      $('.device').addClass('device--visible');
+    }
+  });
 });

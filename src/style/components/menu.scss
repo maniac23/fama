@@ -51,6 +51,12 @@
         color: $secondary-color;
       }
     }
+
+    li.active {
+      a {
+        color: $secondary-color;
+      }
+    }
   }
 
   .logo {
