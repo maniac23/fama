@@ -13,6 +13,10 @@
     margin-bottom: 50px;
     width: 50%;
 
+    &--centered {
+      text-align: center;
+    }
+
     h2 {
       font-size: 5.1875rem;
       font-weight: bold;
@@ -61,6 +65,12 @@
         font-weight: bold;
       }
     }
+
+    &--centered {
+      p {
+        text-align: center;
+      }
+    }
   }
 
   &__buttons {
@@ -83,6 +93,12 @@
       font-style: italic;
       font-size: 0.875rem;
     }
+
+    &--centered {
+      float: none;
+      text-align: center;
+      width: 50%;
+    }
   }
 }
 
@@ -96,6 +112,10 @@
 
   &--visible {
     bottom: -150px;
+  }
+
+  &--full-visible {
+    bottom: -85px;
   }
 
   &__frame {
@@ -144,6 +164,10 @@
   background:
   url("../img/img_autografos.png") 650px 0/35% no-repeat,
   url("../img/bow3.svg")  -25px 400px/105% no-repeat $secondary-color;
+}
+
+.fifth-screen {
+  background: url("../img/bg.jpg")  no-repeat center center / cover;
 }
 
 
