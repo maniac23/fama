@@ -98,6 +98,11 @@
       float: none;
       text-align: center;
       width: 50%;
+
+      a {
+        display: block;
+        margin: 0;
+      }
     }
   }
 }
@@ -115,7 +120,7 @@
   }
 
   &--full-visible {
-    bottom: -15px;
+    bottom: 0;
   }
 
   &__frame {
@@ -243,12 +248,31 @@
 }
 
 @media screen and (max-width: 980px) {
-  .first-screen {
-    background:
-    url("../img/bg1stscreen.png") no-repeat 150px  30% / cover,
-    url("../img/bg.jpg")  no-repeat center center / cover,
-    linear-gradient(45deg, $primary-color, $primary-color);
-    color: #ffffff;
+  // .first-screen {
+  //   background:
+  //   url("../img/bg1stscreen.png") no-repeat 150px  30% / cover,
+  //   url("../img/bg.jpg")  no-repeat center center / cover,
+  //   linear-gradient(45deg, $primary-color, $primary-color);
+  //   color: #ffffff;
+  // }
+  .section {
+    &__header {
+      h2 {
+        font-size: 4rem;
+      }
+
+      h3 {
+        font-size: 3.8rem;
+      }
+    }
+
+    &__text {
+      &--large {
+        p {
+          font-size: 3.5rem;
+        }
+      }
+    }
   }
 }
 
@@ -259,5 +283,55 @@
     url("../img/bg.jpg")  no-repeat center center / cover,
     linear-gradient(45deg, $primary-color, $primary-color);
     color: #ffffff;
+  }
+
+  .second-screen {
+    background:
+    url("../img/img_historias.png") 335px 32px/60% no-repeat,
+    url("../img/bow1.svg") 0 280px/116% no-repeat $secondary-color;
+  }
+
+  .third-screen {
+    background:
+    url("../img/bow2.svg") 120px 123%/99% no-repeat,
+    url("../img/img_tests.png")  335px 20%/50% no-repeat,
+    url("../img/bg.jpg")  no-repeat center center / cover;
+  }
+
+  .fourth-screen {
+    background:
+    url("../img/img_autografos.png") 335px 0/55% no-repeat,
+    url("../img/bow3.svg")  -25px 105%/105% no-repeat $secondary-color;
+  }
+
+  .device {
+    &__frame {
+      width: 350px;
+    }
+
+    &__slides {
+      top: 94px;
+      left: 66px;
+    }
+
+    &__slide {
+      width: 218px;
+    }
+  }
+
+  .section {
+    &__header {
+      h3 {
+        font-size: 3rem;
+      }
+    }
+
+    &__text {
+      &--large {
+        p {
+          font-size: 3rem;
+        }
+      }
+    }
   }
 }
