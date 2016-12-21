@@ -335,3 +335,96 @@
     }
   }
 }
+
+@media screen and (max-width: 640px) {
+  .section {
+    &__text {
+      width: 100%;
+      &--large {
+        width: 100%;
+      }
+    }
+
+    &__header {
+      width: 100%;
+    }
+
+    &__buttons {
+      float: none;
+      width: 100%;
+      margin: 0 auto;
+      text-align: center;
+
+      a {
+        display: block;
+        margin-bottom: 20px;
+      }
+    }
+
+    &:not(:first-child) {
+      .fp-tableCell {
+        display: block;
+        padding-top: 40px;
+      }
+    }
+  }
+
+  .device {
+    &__frame {
+      width: 300px;
+    }
+
+    &__slides {
+      top: 80px;
+      left: 57px;
+    }
+
+    &__slide {
+      width: 186px;
+    }
+
+    &--full-visible {
+      bottom: -100%;
+    }
+  }
+
+  .first-screen {
+    background:
+    url("../img/bg1stscreen.png") no-repeat -320px  30% / cover,
+    url("../img/bg.jpg")  no-repeat center center / cover,
+    linear-gradient(45deg, $primary-color, $primary-color);
+    color: #ffffff;
+  }
+
+  .second-screen {
+    background:
+    url("../img/img_historias.png") 125px 283px/72% no-repeat,
+    url("../img/bow1.svg") 0 450px/116% no-repeat $secondary-color;
+  }
+
+  .third-screen {
+    background:
+    url("../img/bow2.svg") 120px 123%/99% no-repeat,
+    url("../img/img_tests.png")  190px 75%/60% no-repeat,
+    url("../img/bg.jpg")  no-repeat center center / cover;
+  }
+
+  .fourth-screen {
+    background:
+    url("../img/img_autografos.png") 180px 355px/60% no-repeat,
+    url("../img/bow3.svg")  -25px 105%/105% no-repeat $secondary-color;
+  }
+
+  .copyright {
+    text-align: center;
+
+    &__wrap {
+      display: block;
+
+      div {
+        margin-bottom: 15px;
+      }
+    }
+  }
+
+}

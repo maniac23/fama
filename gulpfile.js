@@ -49,7 +49,7 @@ var config = {
     server: {
         baseDir: "./build"
     },
-    tunnel: false,
+    tunnel: true,
     host: 'localhost',
     port: 8080
 };
