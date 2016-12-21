@@ -199,6 +199,49 @@
   }
 }
 
+// ********* MEDIA ************
+
+@media screen and (max-width: 1024px) {
+  .device {
+    right: 1%;
+  }
+
+  .first-screen {
+    background:
+    url("../img/bg1stscreen.png") no-repeat 50px  30% / cover,
+    url("../img/bg.jpg")  no-repeat center center / cover,
+    linear-gradient(45deg, $primary-color, $primary-color);
+    color: #ffffff;
+  }
+
+  .second-screen {
+    background:
+    url("../img/img_historias.png") 480px 0px/55% no-repeat,
+    url("../img/bow1.svg") 0 280px/116% no-repeat $secondary-color;
+  }
+
+  .third-screen {
+    background:
+    url("../img/bow2.svg")  375px 150%/95% no-repeat,
+    url("../img/img_tests.png")  480px 20%/45% no-repeat,
+    url("../img/bg.jpg")  no-repeat center center / cover;
+  }
+
+  .fourth-screen {
+    background:
+    url("../img/img_autografos.png") 480px 0/45% no-repeat,
+    url("../img/bow3.svg")  -25px 400px/105% no-repeat $secondary-color;
+  }
+
+  .section {
+    &__header {
+      h3 {
+        font-size: 4rem;
+      }
+    }
+  }
+}
+
 @media screen and (max-width: 980px) {
   .first-screen {
     background:
