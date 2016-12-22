@@ -1,7 +1,9 @@
 .form {
-  position: relative;
-
-  display: flex;
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 40;
   flex-direction: column;
   justify-content: center;
   align-items: center;
@@ -12,6 +14,14 @@
   color: #ffffff;
 
   background: $dark-primary-color;
+
+  .close {
+    @extend .menu-icon;
+    @extend .menu-icon--opened;
+    display: inline-block;
+    top: 10%;
+    right: 10%;
+  }
 
   h4 {
     width: 40%;
@@ -32,7 +42,6 @@
     justify-content: space-between;
     width: 60%;
     max-width: 600px;
-    margin-bottom: 30px;
   }
 
   fieldset {
@@ -68,7 +77,8 @@
     }
   }
 
-  input {
+  input,
+  textarea {
     display: block;
     width: 60%;
     max-width: 600px;
@@ -87,6 +97,56 @@
 
     &:focus {
       border-bottom: 1px solid $secondary-color;
+    }
+  }
+
+  textarea {
+    line-height: 1;
+  }
+
+  input[type="file"] {
+    width: 0.1px;
+    height: 0.1px;
+    opacity: 0;
+    overflow: hidden;
+    position: absolute;
+    z-index: -1;
+  }
+
+  label {
+    display: block;
+    width: 100%;
+    max-width: 600px;
+    margin-bottom: 30px;
+    padding: 0 10px;
+
+    font-size: 0.85rem;
+    color: rgba(#ffffff, 0.6);
+    text-align: left;
+    border: none;
+    border-bottom: 1px solid $form-border-color;
+    outline: none;
+
+    background: url("../img/ic_attach.svg") no-repeat 100%/16px;
+
+    transition: all 0.3s ease-in;
+  }
+}
+
+
+// ************ MEDIA *********
+@media screen and (max-width: 640px) {
+  .form {
+    h4 {
+      width: 90%;
+    }
+
+    &__wrap {
+      width: 90%;
+    }
+
+    .close {
+      top: 5%;
     }
   }
 }

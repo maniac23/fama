@@ -46,4 +46,13 @@ $(document).ready(function() {
       $('.device').addClass('device--visible');
     }
   });
+  // open hero-form
+  $('#hero').click(function() {
+    $('#hero-form').fadeIn().css('display', 'flex');
+  })
+
+  // close form
+  $('.close').click(function() {
+    $('form').fadeOut();
+  })
 });
