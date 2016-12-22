@@ -66,6 +66,8 @@
     }
 
     &--large {
+      width: 80%;
+
       p {
         font-weight: bold;
         font-size: 4.0625rem;
@@ -518,6 +520,7 @@
     &--visible {
       transform: translateY(35%);
     }
+
     &--full-visible {
       transform: translateY(100%);
     }
