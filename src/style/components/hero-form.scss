@@ -1,0 +1,92 @@
+.form {
+  position: relative;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+  height: 100vh;
+
+  text-align: center;
+  color: #ffffff;
+
+  background: $dark-primary-color;
+
+  h4 {
+    width: 40%;
+    margin: 0;
+    margin-bottom: 50px;
+    padding: 0;
+
+    font-weight: 300;
+    font-size: 1.125rem;
+    font-family: "Open Sans";
+    text-align: center;
+    font-style: italic;
+  }
+
+  &__wrap {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 60%;
+    max-width: 600px;
+    margin-bottom: 30px;
+  }
+
+  fieldset {
+    flex: 1 0 45%;
+
+    border: none;
+    margin: 0;
+    padding: 0;
+
+    &:not(:last-child) {
+      margin-right: 30px;
+    }
+
+    input {
+      display: block;
+      width: 100%;
+      margin-bottom: 30px;
+      padding: 0 10px;
+
+      font-size: 0.85rem;
+      color: #ffffff;
+
+      background: transparent;
+      border: none;
+      border-bottom: 1px solid $form-border-color;
+      outline: none;
+
+      transition: all 0.3s ease-in;
+
+      &:focus {
+        border-bottom: 1px solid $secondary-color;
+      }
+    }
+  }
+
+  input {
+    display: block;
+    width: 60%;
+    max-width: 600px;
+    margin-bottom: 30px;
+    padding: 0 10px;
+
+    font-size: 0.85rem;
+    color: #ffffff;
+
+    background: transparent;
+    border: none;
+    border-bottom: 1px solid $form-border-color;
+    outline: none;
+
+    transition: all 0.3s ease-in;
+
+    &:focus {
+      border-bottom: 1px solid $secondary-color;
+    }
+  }
+}
