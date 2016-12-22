@@ -47,9 +47,19 @@ $(document).ready(function() {
     }
   });
   // open hero-form
-  $('#hero').click(function() {
+  $('button[data-id="hero"]').click(function() {
     $('#hero-form').fadeIn().css('display', 'flex');
-  })
+  });
+
+  // open proponer form
+  $('button[data-id="proponer"]').click(function() {
+    $('#proponer-form').fadeIn().css('display', 'flex');
+  });
+
+  // open contacto form
+  $('button[data-id="contacto"]').click(function() {
+    $('#contacto-form').fadeIn().css('display', 'flex');
+  });
 
   // close form
   $('.close').click(function() {

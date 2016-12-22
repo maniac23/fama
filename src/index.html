@@ -37,8 +37,8 @@
         </ul>
       </div>
       <div class="menu__right">
-        <button class="btn" id="hero">Eres héroe</button>
-        <button class="btn">Proponer nuevos héroes</button>
+        <button class="btn" data-id="hero">Eres héroe</button>
+        <button class="btn" data-id="proponer">Proponer nuevos héroes</button>
       </div>
     </div>
     <div class="menu-icon">
@@ -56,9 +56,8 @@
         <li><a href="#descargar">Descargar</a></li>
       </ul>
       <div class="mobile-menu__buttons">
-        <button class="btn">Eres celebrity</button>
-        <button class="btn">Recomendar un celebrity</button>
-        <button class="btn">Recomendar un celebrity</button>
+        <button class="btn" data-id="hero">Eres héroe</button>
+        <button class="btn" data-id="proponer">Proponer nuevos héroes</button>
       </div>
     </nav>
   </header>
@@ -137,7 +136,7 @@
         <div class="copyright__wrap">
           <div class="copyight__author">by Imaguru team</div>
           <div class="copyight__terms">2016 Famaapp &copy; <a href="#">Politica de privacidad</a></div>
-          <button class=" btn copyight__contacts">Сontacto</button>
+          <button class="btn copyight__contacts" data-id="contacto">Сontacto</button>
         </div>
       </div>
     </section>
@@ -162,7 +161,33 @@
         </fieldset>
       </div>
       <textarea name="bio" placeholder="Biografía"></textarea>
-      <button class="btn" type="submit">Сontacto</button>
+      <button class="btn" type="submit">Enviar</button>
+    </form>
+
+    <form action="#" id="proponer-form" class="form">
+      <div class="close"></div>
+      <h4>Avísanos si quieres conocer las historias de tu  héroe favorito</h4>
+      <div class="form__wrap">
+        <fieldset>
+          <input type="text" name="nombre" placeholder="Nombre del héroe">
+          <input type="text" name="apellidos" placeholder="Apellido del héroe">
+          <input type="text" name="deporte" placeholder="Deporte">
+        </fieldset>
+      </div>
+      <button class="btn" type="submit">Proponer</button>
+    </form>
+
+    <form action="#" id="contacto-form" class="form">
+      <div class="close"></div>
+      <h4>Si tienes algo que contarnos, mándanos un mensaje. ¡Gracias por tu tiempo!</h4>
+      <div class="form__wrap">
+        <fieldset>
+          <input type="text" name="nombre" placeholder="Nombre">
+          <input type="email" name="email" placeholder="Correo electrónico">
+          <input type="text" name="mensaje" placeholder="Mensaje">
+        </fieldset>
+      </div>
+      <button class="btn" type="submit">Enviar</button>
     </form>
   </div>
 	<script src="js/main.js"></script>
