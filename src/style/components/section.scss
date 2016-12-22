@@ -119,44 +119,46 @@
 .device {
   position: fixed;
   right: 10%;
-  bottom: -110%;
+  bottom: 0;
   z-index: 2;
   pointer-events: none;
-
+  transform: translateY(100%);
   overflow: hidden;
+
+  width: 27vmax;
 
   transition: all 0.7s ease-in;
 
   &--visible {
-    bottom: -120px;
+    transform: translateY(18%);
   }
 
   &--full-visible {
-    bottom: 0;
+    transform: translateY(5%);
   }
 
   &__frame {
     position: relative;
 
-    width: 380px;
+    width: 100%;
   }
 
   &__slides {
     position: absolute;
-    top: 103px;
-    left: 72px;
+    top: 15%;
+    left: 19%;
 
     display: flex;
     flex-direction: row;
-    width: 62%;
+    width: 63%;
     overflow: hidden;
 
     transition: all 0.3s ease-in;
   }
 
   &__slide {
-    width: 237px;
-    min-width: 100%;
+
+    width: 100%;
     height: 100%;
 
     transition: all 0.3s ease-in;
@@ -166,24 +168,28 @@
 .first-screen {
   color: #ffffff;
 
-  background: url("../img/bg1stscreen.png") no-repeat 350px  30% / cover,
+  background:
+  url("../img/bg1stscreen.png") no-repeat 350px  30% / cover,
   url("../img/bg.jpg")  no-repeat center center / cover,
   linear-gradient(45deg, $primary-color, $primary-color);
 }
 
 .second-screen {
-  background: url("../img/img_historias.png") 657px 0/43% no-repeat,
+  background:
+  url("../img/img_historias.png") 657px 0/43% no-repeat,
   url("../img/bow1.svg") 0 80px/116% no-repeat $secondary-color;
 }
 
 .third-screen {
-  background: url("../img/bow2.svg")  545px 125px/91% no-repeat,
+  background:
+  url("../img/bow2.svg")  545px 125px/91% no-repeat,
   url("../img/img_tests.png")  650px 55px/37% no-repeat,
   url("../img/bg.jpg")  no-repeat center center / cover;
 }
 
 .fourth-screen {
-  background: url("../img/img_autografos.png") 650px 0/35% no-repeat,
+  background:
+  url("../img/img_autografos.png") 650px 0/35% no-repeat,
   url("../img/bow3.svg")  -25px 400px/105% no-repeat $secondary-color;
 }
 
@@ -225,29 +231,42 @@
 @media screen and (max-width: 1024px) {
   .device {
     right: 1%;
+    width: 35vw;
+
+    &__slides {
+      left: 18%;
+    }
+
+    &--full-visible {
+      transform: translateY(1%);
+    }
   }
 
   .first-screen {
     color: #ffffff;
 
-    background: url("../img/bg1stscreen.png") no-repeat 50px  30% / cover,
+    background:
+    url("../img/bg1stscreen.png") no-repeat 50px  30% / cover,
     url("../img/bg.jpg")  no-repeat center center / cover,
     linear-gradient(45deg, $primary-color, $primary-color);
   }
 
   .second-screen {
-    background: url("../img/img_historias.png") 480px 0/55% no-repeat,
+    background:
+    url("../img/img_historias.png") 480px 0/55% no-repeat,
     url("../img/bow1.svg") 0 280px/116% no-repeat $secondary-color;
   }
 
   .third-screen {
-    background: url("../img/bow2.svg")  375px 150%/95% no-repeat,
+    background:
+    url("../img/bow2.svg")  375px 150%/95% no-repeat,
     url("../img/img_tests.png")  480px 20%/45% no-repeat,
     url("../img/bg.jpg")  no-repeat center center / cover;
   }
 
   .fourth-screen {
-    background: url("../img/img_autografos.png") 480px 0/45% no-repeat,
+    background:
+    url("../img/img_autografos.png") 480px 0/45% no-repeat,
     url("../img/bow3.svg")  -25px 400px/105% no-repeat $secondary-color;
   }
 
@@ -287,46 +306,42 @@
       }
     }
   }
+
+  .device {
+    width: 45vw;
+  }
 }
 
 @media screen and (max-width: 800px) {
   .first-screen {
     color: #ffffff;
-
-    background: url("../img/bg1stscreen.png") no-repeat -70px  30% / cover,
+    background:
+    url("../img/bg1stscreen.png") no-repeat -70px  30% / cover,
     url("../img/bg.jpg")  no-repeat center center / cover,
     linear-gradient(45deg, $primary-color, $primary-color);
   }
 
   .second-screen {
-    background: url("../img/img_historias.png") 335px 32px/60% no-repeat,
+    background:
+    url("../img/img_historias.png") 335px 32px/60% no-repeat,
     url("../img/bow1.svg") 0 280px/116% no-repeat $secondary-color;
   }
 
   .third-screen {
-    background: url("../img/bow2.svg") 120px 123%/99% no-repeat,
+    background:
+    url("../img/bow2.svg") 120px 123%/99% no-repeat,
     url("../img/img_tests.png")  335px 20%/50% no-repeat,
     url("../img/bg.jpg")  no-repeat center center / cover;
   }
 
   .fourth-screen {
-    background: url("../img/img_autografos.png") 335px 0/55% no-repeat,
+    background:
+    url("../img/img_autografos.png") 335px 0/55% no-repeat,
     url("../img/bow3.svg")  -25px 105%/105% no-repeat $secondary-color;
   }
 
   .device {
-    &__frame {
-      width: 350px;
-    }
-
-    &__slides {
-      top: 94px;
-      left: 66px;
-    }
-
-    &__slide {
-      width: 218px;
-    }
+    width: 55vw;
   }
 
   .section {
@@ -382,45 +397,33 @@
   }
 
   .device {
-    &__frame {
-      width: 300px;
-    }
-
-    &__slides {
-      top: 80px;
-      left: 57px;
-    }
-
-    &__slide {
-      width: 186px;
-    }
-
-    &--full-visible {
-      bottom: -100%;
-    }
+    width: 60vw;
   }
 
   .first-screen {
     color: #ffffff;
-
-    background: url("../img/bg1stscreen.png") no-repeat -320px  30% / cover,
+    background:
+    url("../img/bg1stscreen.png") no-repeat -320px  30% / cover,
     url("../img/bg.jpg")  no-repeat center center / cover,
     linear-gradient(45deg, $primary-color, $primary-color);
   }
 
   .second-screen {
-    background: url("../img/img_historias.png") 125px 283px/72% no-repeat,
+    background:
+    url("../img/img_historias.png") 125px 283px/72% no-repeat,
     url("../img/bow1.svg") 0 450px/116% no-repeat $secondary-color;
   }
 
   .third-screen {
-    background: url("../img/bow2.svg") 120px 123%/99% no-repeat,
+    background:
+    url("../img/bow2.svg") 120px 123%/99% no-repeat,
     url("../img/img_tests.png")  190px 75%/60% no-repeat,
     url("../img/bg.jpg")  no-repeat center center / cover;
   }
 
   .fourth-screen {
-    background: url("../img/img_autografos.png") 180px 355px/60% no-repeat,
+    background:
+    url("../img/img_autografos.png") 180px 355px/60% no-repeat,
     url("../img/bow3.svg")  -25px 105%/105% no-repeat $secondary-color;
   }
 
@@ -439,18 +442,21 @@
 
 @media screen and (max-width: 480px) {
   .second-screen {
-    background: url("../img/img_historias.png") 23px 193px/90% no-repeat,
+    background:
+    url("../img/img_historias.png") 23px 193px/90% no-repeat,
     url("../img/bow1.svg") 0 350px/116% no-repeat $secondary-color;
   }
 
   .third-screen {
-    background: url("../img/bow2.svg") 50px 115%/99% no-repeat,
+    background:
+    url("../img/bow2.svg") 50px 115%/99% no-repeat,
     url("../img/img_tests.png")  24px 60%/85% no-repeat,
     url("../img/bg.jpg")  no-repeat center center / cover;
   }
 
   .fourth-screen {
-    background: url("../img/img_autografos.png") -5px 211px/85% no-repeat,
+    background:
+    url("../img/img_autografos.png") -5px 211px/85% no-repeat,
     url("../img/bow3.svg")  -25px 105%/105% no-repeat $secondary-color;
   }
 
@@ -509,25 +515,11 @@
   }
 
   .device {
-    width: 230px;
-
     &--visible {
-      bottom: -75px;
+      transform: translateY(35%);
     }
-
-    &__frame {
-      width: 240px;
-    }
-
-    &__slides {
-      top: 65px;
-      left: 45px;
-
-      width: 65%;
-    }
-
     &--full-visible {
-      bottom: -100%;
+      transform: translateY(100%);
     }
   }
 
