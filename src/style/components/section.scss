@@ -170,10 +170,10 @@
 .first-screen {
   color: #ffffff;
 
-  background:
-  url("../img/bg1stscreen.png") no-repeat 350px  30% / cover,
-  url("../img/bg.jpg")  no-repeat center center / cover,
-  linear-gradient(45deg, $primary-color, $primary-color);
+  background: url("../img/bgFlat.jpg") no-repeat 50%;
+  // url("../img/bg1stscreen.png") no-repeat 350px  30% / cover,
+  // url("../img/bg.jpg")  no-repeat center center / cover,
+  // linear-gradient(45deg, $primary-color, $primary-color);
 }
 
 .second-screen {
@@ -244,14 +244,14 @@
     }
   }
 
-  .first-screen {
-    color: #ffffff;
-
-    background:
-    url("../img/bg1stscreen.png") no-repeat 50px  30% / cover,
-    url("../img/bg.jpg")  no-repeat center center / cover,
-    linear-gradient(45deg, $primary-color, $primary-color);
-  }
+  // .first-screen {
+  //   color: #ffffff;
+  //
+  //   background:
+  //   url("../img/bg1stscreen.png") no-repeat 50px  30% / cover,
+  //   url("../img/bg.jpg")  no-repeat center center / cover,
+  //   linear-gradient(45deg, $primary-color, $primary-color);
+  // }
 
   .second-screen {
     background:
@@ -315,13 +315,13 @@
 }
 
 @media screen and (max-width: 800px) {
-  .first-screen {
-    color: #ffffff;
-    background:
-    url("../img/bg1stscreen.png") no-repeat -70px  30% / cover,
-    url("../img/bg.jpg")  no-repeat center center / cover,
-    linear-gradient(45deg, $primary-color, $primary-color);
-  }
+  // .first-screen {
+  //   color: #ffffff;
+  //   background:
+  //   url("../img/bg1stscreen.png") no-repeat -70px  30% / cover,
+  //   url("../img/bg.jpg")  no-repeat center center / cover,
+  //   linear-gradient(45deg, $primary-color, $primary-color);
+  // }
 
   .second-screen {
     background:
@@ -402,13 +402,13 @@
     width: 60vw;
   }
 
-  .first-screen {
-    color: #ffffff;
-    background:
-    url("../img/bg1stscreen.png") no-repeat -320px  30% / cover,
-    url("../img/bg.jpg")  no-repeat center center / cover,
-    linear-gradient(45deg, $primary-color, $primary-color);
-  }
+  // .first-screen {
+  //   color: #ffffff;
+  //   background:
+  //   url("../img/bg1stscreen.png") no-repeat -320px  30% / cover,
+  //   url("../img/bg.jpg")  no-repeat center center / cover,
+  //   linear-gradient(45deg, $primary-color, $primary-color);
+  // }
 
   .second-screen {
     background:
