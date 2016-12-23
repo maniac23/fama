@@ -1,6 +1,6 @@
 .mobile-menu {
   position: relative;
-  z-index: 10;
+  z-index: 30;
   display: none;
   flex-direction: column;
   justify-content: space-between;
@@ -70,7 +70,7 @@
   background-color: currentColor;
   background-clip: content-box;
   transition: background-color 1s;
-  z-index: 20;
+  z-index: 40;
   top: 32px;
   right: 5%;
   cursor: pointer;
@@ -116,8 +116,9 @@
   }
 }
 
-@media screen and (max-width: 480px) {
+@media screen and (max-width: 460px) {
   .mobile-menu {
+    padding: 15% 0;
     &__list {
       li {
         margin: 10px 0;

@@ -25,6 +25,7 @@ $(document).ready(function() {
   $('.menu-icon').click(function(){
     $(this).toggleClass('menu-icon--opened');
     $('.mobile-menu').fadeToggle().css('display', 'flex');
+    $('#fp-nav').fadeToggle();
   });
 
   // hide mobile menu on link click

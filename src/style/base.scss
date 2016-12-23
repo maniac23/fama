@@ -21,6 +21,11 @@ body {
 // section navigation
 
 #fp-nav {
+  &.left {
+    z-index: 10;
+  }
+
+
   ul li a span {
     background: #ffffff;
   }
