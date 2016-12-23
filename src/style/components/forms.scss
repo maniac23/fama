@@ -16,6 +16,16 @@
 
   background: $dark-primary-color;
 
+  &--success {
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 50vw;
+    height: 50vh;
+    min-width: 200px;
+    min-height: 200px;
+  }
+
   .close {
     top: 10%;
     right: 10%;

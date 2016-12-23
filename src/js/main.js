@@ -65,5 +65,11 @@ $(document).ready(function() {
   // close form
   $('.close').click(function() {
     $('form').fadeOut();
-  })
+  });
+
+  $('button[type="submit"]').click(function(e) {
+    e.preventDefault();
+    $('.form--success').fadeIn().css('display', 'flex');
+    $(this).parent('form').submit();
+  });
 });
