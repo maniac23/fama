@@ -1,7 +1,7 @@
 .btn {
   background-color: transparent;
   background-size: 100%;
-  padding: 0.4375rem 1.25rem;
+  padding: 0.4375em 1.25em;
   font-size: 1rem;
   font-weight: bold;
   border: 1px solid #ffffff;
@@ -18,5 +18,12 @@
     border-image: linear-gradient(to right, #00db9e, #069999);
     border: 1px solid #00db9e;
     transition: all 0.3s ease-in;
+  }
+}
+
+
+@media screen and (max-width: 640px) {
+  .btn {
+    font-size: 0.75rem;
   }
 }

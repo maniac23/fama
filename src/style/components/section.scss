@@ -26,7 +26,7 @@
       padding: 0;
 
       font-weight: bold;
-      font-size: 5.1875rem;
+      font-size: 5rem;
       text-transform: uppercase;
     }
 
@@ -36,7 +36,7 @@
       padding: 0;
 
       font-weight: bold;
-      font-size: 5rem;
+      font-size: 4.8rem;
       text-transform: uppercase;
     }
 
@@ -70,7 +70,7 @@
 
       p {
         font-weight: bold;
-        font-size: 4.0625rem;
+        font-size: 3.6rem;
         font-family: Lato, Arial, sans-serif;
       }
     }
@@ -98,6 +98,8 @@
     }
 
     p {
+      margin: 0;
+      padding: 0;
       font-weight: 300;
       font-size: 0.875rem;
       font-family: "Open Sans", Arial, sans-serif;
@@ -136,7 +138,7 @@
   }
 
   &--full-visible {
-    transform: translateY(5%);
+    transform: translateY(4%);
   }
 
   &__frame {
@@ -169,11 +171,7 @@
 
 .first-screen {
   color: #ffffff;
-
-  background: url("../img/bgFlat.jpg") no-repeat 50%;
-  // url("../img/bg1stscreen.png") no-repeat 350px  30% / cover,
-  // url("../img/bg.jpg")  no-repeat center center / cover,
-  // linear-gradient(45deg, $primary-color, $primary-color);
+  background: url("../img/bgFlat.jpg") no-repeat 50%/cover;
 }
 
 .second-screen {
@@ -233,7 +231,7 @@
 @media screen and (max-width: 1024px) {
   .device {
     right: 1%;
-    width: 35vw;
+    width: 35vmax;
 
     &__slides {
       left: 18%;
@@ -310,7 +308,7 @@
   }
 
   .device {
-    width: 45vw;
+    width: 43vmin;
   }
 }
 
@@ -363,86 +361,208 @@
   }
 }
 
-@media screen and (max-width: 640px) {
+@media screen and (max-width: 768px) {
   .section {
-    &__text {
-      width: 100%;
-
-      &--large {
-        width: 100%;
-      }
-    }
-
-    &__header {
-      width: 100%;
-    }
-
-    &__buttons {
-      float: none;
-      width: 100%;
-      margin: 0 auto;
-
-      text-align: center;
-
-      a {
-        display: block;
-        margin-bottom: 20px;
-      }
-    }
-
     &:not(:first-child) {
       .fp-tableCell {
         display: block;
         padding-top: 40px;
       }
     }
-  }
 
-  .device {
-    width: 60vw;
-  }
+    &__header {
+      width: 85%;
 
-  // .first-screen {
-  //   color: #ffffff;
-  //   background:
-  //   url("../img/bg1stscreen.png") no-repeat -320px  30% / cover,
-  //   url("../img/bg.jpg")  no-repeat center center / cover,
-  //   linear-gradient(45deg, $primary-color, $primary-color);
-  // }
+      &--centered {
+        width: 50%;
+      }
+    }
+
+    &__text {
+      width: 85%;
+
+      &--large {
+        width: 85%;
+      }
+
+      &--centered {
+        width: 50%;
+      }
+    }
+  }
 
   .second-screen {
     background:
-    url("../img/img_historias.png") 125px 283px/72% no-repeat,
-    url("../img/bow1.svg") 0 450px/116% no-repeat $secondary-color;
+    url(../img/img_historias.png) 50% 50%/70vw no-repeat,
+    url(../img/bow1.svg) 0 120%/116% no-repeat $secondary-color;
   }
 
   .third-screen {
     background:
-    url("../img/bow2.svg") 120px 123%/99% no-repeat,
-    url("../img/img_tests.png")  190px 75%/60% no-repeat,
-    url("../img/bg.jpg")  no-repeat center center / cover;
+     url(../img/bow2.svg) 120px 123%/99% no-repeat,
+     url(../img/img_tests.png) 50% 50%/70vw no-repeat,
+     url(../img/bg.jpg) center center/cover no-repeat;
   }
 
   .fourth-screen {
     background:
-    url("../img/img_autografos.png") 180px 355px/60% no-repeat,
+    url("../img/img_autografos.png") 50% 90%/65vw no-repeat,
     url("../img/bow3.svg")  -25px 105%/105% no-repeat $secondary-color;
   }
 
-  .copyright {
-    text-align: center;
-
-    &__wrap {
-      display: block;
-
-      div {
-        margin-bottom: 15px;
+  .device {
+    &--full-visible {
+      transform: translateY(-18%);
+    }
+  }
+}
+@media screen and (max-width : 680px) {
+  .section {
+    &:not(:first-child) {
+      .fp-tableCell {
+        padding-top: 10px;
       }
+    }
+
+    &:last-child {
+      .fp-tableCell {
+        padding-top: 0px;
+      }
+    }
+
+    &__header {
+      width: 60%;
+
+      h2 {
+        font-size: 1.25rem;
+      }
+
+      h3 {
+        font-size: 2rem;
+      }
+
+      p {
+        font-size: 2rem;
+      }
+
+      &--centered {
+        text-align: left;
+        margin-bottom: 20px;
+      }
+    }
+
+    &__text {
+      width: 50%;
+
+      p {
+        font-size: 0.875rem;
+      }
+
+      &--centered {
+        margin-bottom: 20px;
+        width: 100%;
+        p {
+          text-align: left;
+        }
+      }
+    }
+
+    &__buttons {
+      float: none;
+
+
+      &--centered {
+        width: 100%;
+        text-align: left;
+      }
+
+      a {
+        display: inline-block;
+      }
+
+      img {
+        width: 150px;
+      }
+
+      p {
+        font-size: 0.75rem;
+      }
+    }
+  }
+
+
+  .mobile-menu {
+    .logo {
+      h1 {
+        font-size: 1.5rem;
+      }
+    }
+
+    &__list {
+      margin: 0;
+
+      li {
+        margin: 10px 0;
+      }
+
+      a {
+        font-size: 0.75rem;
+      }
+    }
+
+    &__buttons {
+      flex-direction: row;
+      .btn {
+        margin: 0;
+        font-size: 0.75rem;
+
+        &:not(:last-child) {
+          margin-right: 10px;
+        }
+      }
+
+    }
+  }
+
+  .copyright {
+    font-size: 0.75rem;
+  }
+
+  .device {
+    width: 55vh;
+
+    &--full-visible {
+      transform: translateY(100%);
+    }
+  }
+
+  .second-screen {
+    background:
+    url(../img/img_historias.png) 80% 30%/70vmin no-repeat,
+    url(../img/bow1.svg) 0 45vh/102% no-repeat $secondary-color;
+  }
+
+  .third-screen {
+    background:
+     url(../img/bow2.svg) 120px 123%/85% no-repeat,
+     url(../img/img_tests.png) 80% 20%/70vmin no-repeat,
+     url(../img/bg.jpg) center center/cover no-repeat;
+  }
+
+
+  .fourth-screen {
+    background:
+    url("../img/img_autografos.png") 85% 20%/65vmin no-repeat,
+    url("../img/bow3.svg")  -25px 105%/105% no-repeat $secondary-color;
+
+    .section__text {
+      width: 60%;
     }
   }
 }
 
-@media screen and (max-width: 480px) {
+
+@media screen and (max-width: 400px) {
   .second-screen {
     background:
     url("../img/img_historias.png") 23px 193px/90% no-repeat,
