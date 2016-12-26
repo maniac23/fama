@@ -64,7 +64,7 @@ $(document).ready(function() {
 
   // close form
   $('.close').click(function() {
-    $('form').fadeOut();
+    $(this).parent().fadeOut();
   });
 
   $('button[type="submit"]').click(function(e) {
