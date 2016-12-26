@@ -236,7 +236,7 @@
   .second-screen {
     background:
     url("../img/img_historias.png") 80% 40%/43% no-repeat,
-    url("../img/bow1.svg") 0 80px/116% no-repeat $secondary-color;
+    url("../img/bow1.svg") 0 -100%/116% no-repeat $secondary-color;
   }
 
   .third-screen {
@@ -249,10 +249,12 @@
   .fourth-screen {
     background:
     url("../img/img_autografos.png") 80% 40% /35% no-repeat,
-    url("../img/bow3.svg")  -25px 400px/105% no-repeat $secondary-color;
+    url("../img/bow3.svg")  -25px 500px/105% no-repeat $secondary-color;
   }
 
   .device {
+    right: 15%;
+
     &--full-visible {
       transform: translateY(-10%);
     }
