@@ -40,9 +40,23 @@ $(document).ready(function() {
   $(window).scroll(function() {
     if ($('.first-screen').hasClass('active')) {
       $('.device').removeClass('device--visible');
-    } else if ($('.fifth-screen').hasClass('active')) {
+    } else if($('.second-screen').hasClass('active')) {
+      $('.device').addClass('device--visible');
+      $('.device__slide').removeClass('device__slide--visible');
+      // $("#slide2").addClass("device__slide--visible");
+    } else if($('.third-screen').hasClass('active')) {
+      $('.device__slide').removeClass('device__slide--visible');
+      // $('.device').addClass('device--visible');
+      $("#slide2").addClass("device__slide--visible");
+    } else if ($('.fourth-screen').hasClass('active')){
+      $('.device__slide').removeClass('device__slide--visible');
+      $('#slide3').addClass('device__slide--visible');
+    }
+    else if ($('.fifth-screen').hasClass('active')) {
       $('.device').addClass('device--full-visible');
-    } else {
+      $('#slide4').addClass('device__slide--visible');
+    }
+    else {
       $('.device').removeClass('device--full-visible');
       $('.device').addClass('device--visible');
     }

@@ -154,7 +154,7 @@
   &__slides {
     position: absolute;
     top: 15%;
-    left: 19%;
+    left: 18%;
 
     display: flex;
     flex-direction: row;
@@ -169,8 +169,25 @@
     min-width: 100%;
     height: 100%;
 
-    transition: all 0.3s ease-in;
+    transition: all 0.7s ease-in;
+
+    &--visible {
+      transform: translateX(-100%);
+    }
   }
+}
+
+#slide1.device__slide--visible {
+  transform: translateX(-100%);
+}
+#slide2.device__slide--visible {
+  transform: translateX(-100%);
+}
+#slide3.device__slide--visible {
+  transform: translateX(-200%);
+}
+#slide4.device__slide--visible {
+  transform: translateX(-300%);
 }
 
 .first-screen {
