@@ -14,12 +14,15 @@ $(document).ready(function() {
     easingcss3: 'ease-in-out',
     scrollingSpeed: 1000,
     scrollBar: true,
-    // verticalCentered: true,
     onLeave: function(index, nextIndex, direction) {
       var leavingSection = $(this);
-      console.log(nextIndex);
       if(nextIndex == 1) {
         $('.device').removeClass('device--visible');
+        // device slide scroll animation
+      } else if (index != 1 && direction == 'down') {
+        $('.device__slide').css('transform', 'translateX(' + (-100 * index + 100) + '%)');
+      } else if (index != 1 && direction == 'up') {
+        $('.device__slide').css('transform', 'translateX(' + (200 - nextIndex * 100) + '%)');
       }
     }
   });
@@ -43,24 +46,13 @@ $(document).ready(function() {
   $(window).scroll(function() {
     if ($('.first-screen').hasClass('active')) {
       $('.device').removeClass('device--visible, device--full-visible');
-    } else if($('.second-screen').hasClass('active')) {
-      $('.device').addClass('device--visible');
-      $('.device__slide').removeClass('device__slide--visible');
-    } else if($('.third-screen').hasClass('active')) {
-      $('.device__slide').removeClass('device__slide--visible');
-      $('#slide2').addClass('device__slide--visible');
     } else if ($('.fourth-screen').hasClass('active')) {
-      $('#slide4').removeClass('device__slide--visible');
-      $('#slide3').addClass('device__slide--visible');
       $('.device').removeClass('device--full-visible');
-    }
-    else if ($('.fifth-screen').hasClass('active')) {
+    } else if ($('.fifth-screen').hasClass('active')) {
       $('.device').addClass('device--full-visible');
-      $('#slide4').addClass('device__slide--visible');
-    }
-    else {
+    } else {
       $('.device').removeClass('device--full-visible');
-      $('.device').removeClass('device--visible');
+      $('.device').addClass('device--visible');
     }
   });
 
@@ -84,6 +76,7 @@ $(document).ready(function() {
     $(this).parent().fadeOut();
   });
 
+  // form submit
   $('button[type="submit"]').click(function(e) {
     e.preventDefault();
     $('.form--success').fadeIn().css('display', 'flex');
