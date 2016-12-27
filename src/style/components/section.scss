@@ -170,28 +170,8 @@
     height: 100%;
 
     transition: all 0.7s ease-in-out;
-
-    &--visible {
-      transform: translateX(-100%);
-    }
   }
 }
-
-// #slide1.device__slide--visible {
-//   transform: translateX(-100%);
-// }
-//
-// #slide2.device__slide--visible {
-//   transform: translateX(-100%);
-// }
-//
-// #slide3.device__slide--visible {
-//   transform: translateX(-200%);
-// }
-//
-// #slide4.device__slide--visible {
-//   transform: translateX(-300%);
-// }
 
 .first-screen {
   color: #ffffff;
