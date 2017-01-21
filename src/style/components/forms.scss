@@ -26,6 +26,7 @@
     min-height: 200px;
   }
 
+
   .close {
     top: 10%;
     right: 10%;
@@ -47,6 +48,18 @@
     font-family: "Open Sans";
     text-align: center;
     font-style: italic;
+  }
+
+  &--visible {
+    display: flex;
+
+    h4 {
+      margin-bottom: 20px;
+    }
+
+    p {
+      margin-bottom: 40px;
+    }
   }
 
   &__wrap {
