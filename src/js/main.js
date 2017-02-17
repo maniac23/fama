@@ -56,6 +56,11 @@ $(document).ready(function() {
     }
   });
 
+  function showPopup(text) {
+    $('.form--success').fadeIn().css('display', 'flex');
+    $('.form--success h2').text(text);
+  }
+
   // open hero-form
   $('button[data-id="hero"]').click(function() {
     $('#hero-form').fadeIn().css('display', 'flex');
@@ -79,7 +84,48 @@ $(document).ready(function() {
   // form submit
   $('button[type="submit"]').click(function(e) {
     e.preventDefault();
-    $('.form--success').fadeIn().css('display', 'flex');
+    showPopup('¡Gracias por tu mensaje');
     $(this).parent('form').submit();
+  });
+
+
+
+  // reset-password form
+
+  $('#reset-form').on('submit', function(e) {
+    e.preventDefault();
+    var pass = $('#reset-form input[name="password"]').val();
+    var passCheck = $('#reset-form input[name="password_check"]').val();
+    var currentUrl = window.location.href;
+    // выбираем токен из url
+    var token = new URL(currentUrl).href.split('&').filter(function(el) {if(el.match('token') !== null) return true; })[0].split('=')[1];
+    var url = 'http://fama-dev.blak-it.com/api/change_password';
+    // проверяем совпадают ли пароли
+    if(pass !== "" && passCheck !== "" && pass === passCheck) {
+      // если ок, то отправляем запрос
+      $.ajax({
+        type: 'POST',
+        contentType: "application/x-www-form-urlencoded",
+        url: url,
+        crossDomain : true,
+        data: {
+          'token': token,
+          'password': pass
+        },
+        dataType : "json",
+        success: function () {
+          showPopup('Su contraseña ha cambiado con suceso.');
+        },
+        error: function(error){
+          showPopup('¡Disculpe! Algo ha salido mal. Inténtalo mas tarde.');
+        }
+      });
+    } else {
+      // если нет, то просим ввести заново
+      showPopup('Las contraseñas introducidas no coinciden!');
+      // сбрасываем введенные значения
+      $('#reset-form input[name="password"]').val("");
+      $('#reset-form input[name="password_check"]').val("");
+    }
   });
 });
